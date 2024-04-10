@@ -34,7 +34,21 @@ class CfestatusRepository: Repository<Cfestatus> {
     override suspend fun find(bsq: String): List<Cfestatus> {
         var list: List<Cfestatus> = listOf<Cfestatus>()
         transaction {
-            list = CfestatusEntity.selectAll().map {e ->
+            list = CfestatusEntity.selectAll().map { e ->
+                Cfestatus(
+                    idEstatus = e[CfestatusEntity.idEstatus],
+                    nombre = e[CfestatusEntity.nombre],
+                    activo = e[CfestatusEntity.activo]
+                )
+            }.toList()
+        }
+        return list
+    }
+
+    fun all(): List<Cfestatus> {
+        var list: List<Cfestatus> = listOf<Cfestatus>()
+        transaction {
+            list = CfestatusEntity.selectAll().map { e ->
                 Cfestatus(
                     idEstatus = e[CfestatusEntity.idEstatus],
                     nombre = e[CfestatusEntity.nombre],

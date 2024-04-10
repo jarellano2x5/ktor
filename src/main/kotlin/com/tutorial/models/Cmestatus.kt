@@ -1,6 +1,9 @@
 package com.tutorial.models
 
-data class Cfestatus (
+import kotlinx.serialization.Serializable
+
+@Serializable
+class Cmestatus (
     val idEstatus: Int = 0,
     val nombre: String = "",
     val activo: Boolean = true

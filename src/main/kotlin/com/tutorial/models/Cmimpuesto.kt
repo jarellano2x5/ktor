@@ -1,5 +1,8 @@
 package com.tutorial.models
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 class Cmimpuesto (
     val idImpuesto: Int = 0,
     val tasa: Float = 0.0f,

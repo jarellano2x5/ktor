@@ -1,7 +1,8 @@
 package com.tutorial.models
 
-import java.io.Serializable
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Cfimagen (
     val idImagen: Int = 0,
     val tipo: String = "",
@@ -10,4 +11,4 @@ data class Cfimagen (
     val extension: String = "",
     //val imagen: ByteArray,
     val idEmpresa: Int = 0
-) : Serializable
+)

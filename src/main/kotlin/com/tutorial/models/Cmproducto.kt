@@ -1,5 +1,8 @@
 package com.tutorial.models
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 class Cmproducto (
     val idProducto: Int = 0,
     val codigo: String = "",

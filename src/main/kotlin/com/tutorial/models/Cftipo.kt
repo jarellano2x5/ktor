@@ -1,9 +1,10 @@
 package com.tutorial.models
 
-import java.io.Serializable
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Cftipo (
     val idTipo: Int = 0,
     val nombre: String = "",
     val activo: Boolean = true
-) : Serializable
+)

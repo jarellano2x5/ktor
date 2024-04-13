@@ -6,7 +6,7 @@ import org.jetbrains.exposed.sql.transactions.transaction
 
 object DataFactory {
     fun init() {
-        Database.connect("jdbc:postgresql://tgtendencestudios.com:5432/ecommprod", driver = "org.postgresql.Driver", user = "develop", password = "d3v3l0p#")
+        Database.connect("")
 
         transaction {
             SchemaUtils.create(CftipoEntity)
